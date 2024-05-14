@@ -20,6 +20,9 @@ const SingleRepositoryPage = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
+
+  const screenWidth = window.innerWidth;
+
   const handleRepoClick = (repoId) => {
     setSelectedRepoId(repoId);
   };
@@ -76,6 +79,10 @@ const SingleRepositoryPage = () => {
   const filteredRepos = repos.filter((repo) =>
     repo.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  
+
+
 
   if (loading) {
     return <div className="loader"></div>;
@@ -190,7 +197,7 @@ const SingleRepositoryPage = () => {
           </div>
         ) : (
           <p className="italic text-center text-gray-700">
-            Select a repository from the left to view details.
+            Select a repository from the {`${screenWidth < 480 ? "top": "left"}`} to view details.
           </p>
         )}
       </div>
