@@ -48,7 +48,7 @@ const Navbar = () => {
       
     </div>
      {/* Navigation links */}
-     <div className={`  ${toggleMenu?"z-10" : " "} flex flex-col bg-indigo-900 text-white w-[75%] items-center font-extrabold justify-around  transition-all duration-500 ${toggleMenu ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}>
+     <div className={`  ${toggleMenu?"z-10" : " "} flex flex-col bg-indigo-900 text-white w-[75%] items-center font-extrabold justify-around absolute  h-[24rem] transition-all duration-500 ${toggleMenu ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}>
           <Link
             to="/"
             className=" text-lg hover:underline underline-offset-8 hover:text-indigo-400 "
