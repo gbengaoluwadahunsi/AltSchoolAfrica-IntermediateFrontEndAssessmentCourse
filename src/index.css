@@ -1,0 +1,113 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+ font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+}
+
+
+
+
+
+
+.btn-scrollTop {
+  position: fixed;
+  color: #3730A3;
+  bottom: 4rem;
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+  right: 2%;
+  background: none;
+  border-radius: 50px;
+  padding: 0px;
+  border: none;
+  opacity: 0.95;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid #3730A3;
+  border-right-color: orange;
+  animation: l2 1s infinite linear;
+  height: screen;
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  z-index: 1000;
+  opacity: 0.95;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
+
+
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination li {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.pagination li.active a {
+  color: white;
+  background-color: #3f51b5;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.pagination li a {
+  color: #3f51b5;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #3f51b5;
+  border-radius: 5px;
+}
+
+.pagination li a:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+
+/* .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+ */
